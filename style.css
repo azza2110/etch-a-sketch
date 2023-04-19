@@ -2,7 +2,7 @@
     --grey-dark: #333333;
     --grey-light: #FAFAFA;
     --white: #FFFFFF;
-    --grey-shadow: #33333310;
+    --grey-shadow: #33333330;
     --background-light: #E9F1F3;
     --feature-dark: #02BDC4;
     --feature-light: #90D4E0;
@@ -84,11 +84,8 @@ h2 {
 }
 
 .grid-cell {
-    background-color: var(--white);
-    border:1px solid var(--grey-light);
-    flex: auto;
-}
-
-.hovered-cell {
     background-color: var(--feature-light);
+    opacity: 0%;
+    border:1px solid var(--white);
+    flex: auto;
 }

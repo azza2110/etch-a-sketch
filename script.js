@@ -42,7 +42,7 @@ function newGrid(resolution) {
         for (let j = 0; j<resolution; j++) {
             const newCell = document.createElement('div');
             newCell.classList.add('grid-cell');
-            newCell.addEventListener('mouseenter',hoverEffect);
+            newCell.addEventListener('mouseenter',hoverAction);
             newRow.appendChild(newCell);
         };    
         sketchBoard.appendChild(newRow);
@@ -50,7 +50,10 @@ function newGrid(resolution) {
     console.log("New grid generated"); 
 };
 
-function hoverEffect() {
-    this.classList.add('hovered-cell');
-    console.log("Hover effect triggered");
+function hoverAction(e) {
+    let currentOpacity = window.getComputedStyle(e.target).opacity*1;
+    let newOpacity = currentOpacity + 0.1;
+    if (newOpacity <= 1) {
+        e.target.style.opacity = newOpacity;
+    }
 };
