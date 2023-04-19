@@ -84,7 +84,7 @@ h2 {
 }
 
 .grid-cell {
-    background-color: var(--feature-light);
+    background-color: var(--feature-dark);
     opacity: 0%;
     border:1px solid var(--white);
     flex: auto;

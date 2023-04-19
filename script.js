@@ -51,9 +51,14 @@ function newGrid(resolution) {
 };
 
 function hoverAction(e) {
+    console.log(window.getComputedStyle(e.target).backgroundColor);
+    let newBackgroundColor = "rgb("+Math.floor(Math.random()*256)
+                              +", "+Math.floor(Math.random()*256)
+                              +", "+Math.floor(Math.random()*256)+")";
     let currentOpacity = window.getComputedStyle(e.target).opacity*1;
     let newOpacity = currentOpacity + 0.1;
     if (newOpacity <= 1) {
         e.target.style.opacity = newOpacity;
-    }
+      //e.target.style.backgroundColor = newBackgroundColor;
+    }                       
 };
